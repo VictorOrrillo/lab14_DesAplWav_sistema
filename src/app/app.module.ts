@@ -19,6 +19,9 @@ import { EditarTiendasComponent } from './pages/tiendas/editar-tiendas/editar-ti
 import { ListarCinesComponent } from './pages/cines/listar-cines/listar-cines.component';
 import { CrearCinesComponent } from './pages/cines/crear-cines/crear-cines.component';
 import { EditarCinesComponent } from './pages/cines/editar-cines/editar-cines.component';
+import { ListarTarifasComponent } from './pages/tarifas/listar-tarifas/listar-tarifas.component';
+import { CrearTarifasComponent } from './pages/tarifas/crear-tarifas/crear-tarifas.component';
+import { EditarTarifasComponent } from './pages/tarifas/editar-tarifas/editar-tarifas.component';
 
 
 @NgModule({
@@ -35,7 +38,10 @@ import { EditarCinesComponent } from './pages/cines/editar-cines/editar-cines.co
     EditarTiendasComponent,
     ListarCinesComponent,
     CrearCinesComponent,
-    EditarCinesComponent
+    EditarCinesComponent,
+    ListarTarifasComponent,
+    CrearTarifasComponent,
+    EditarTarifasComponent
   ],
   imports: [
     BrowserModule,

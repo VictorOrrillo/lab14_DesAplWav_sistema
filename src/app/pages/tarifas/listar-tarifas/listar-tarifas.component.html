@@ -13,9 +13,9 @@
                                         <i class="pe page-header-icon pe-7s-note2"></i>
                                     </div>
                                     <div class="header-title">
-                                        <h3>Cines</h3>
+                                        <h3>Tarifas</h3>
                                         <small>
-                                            Cines Registrados
+                                            Tarifas Registradas
                                         </small>
                                     </div>
                                     <hr>
@@ -25,38 +25,28 @@
                                     </div>
                                     <div class="col-sm-12 text-right">
                                             <a id="btnNuevo" class="btn btn-w-md btn-info"
-                                                routerLink="/crear-cines">Nuevo Cines</a>&nbsp;&nbsp;
-                                            <a id="btnNuevo" class="btn btn-w-md btn-warning">Nuevo Reporte</a>
+                                                routerLink="/crear-tarifas">Nuevas tarifas</a>&nbsp;&nbsp;
                                             <a id="btnNuevo" class="btn btn-w-md btn-warning"
                                             (click)="openPdfTables()">Imprimir</a>
-                                            
                                     </div>
                                 </div>
                                 <br>
                                 <br>
                                 <div class="table-responsive">
-                                    <table *ngIf="listCines.length > 0" class="table table-hover table-striped">
+                                    <table *ngIf="listTarifas.length > 0" class="table table-hover table-striped">
                                         <thead>
                                             <tr>
-                                                <th>Nombre</th>
-                                                <th>Calle</th>
-                                                <th>Numero</th>
-                                                <th>Telefono</th>
                                                 <th>Dia</th>
-                                                <th>Tarifa</th>
+                                                <th>Precio</th>
                                             </tr>
                                         </thead>
                                         <tbody id="datos">
-                                            <tr *ngFor="let cine of listCines">
-                                                <td>{{ cine.nombre }}</td>
-                                                <td>{{ cine.calle }}</td>
-                                                <td>{{ cine.numero }}</td>
-                                                <td>{{ cine.telefono }}</td>
-                                                <td>{{ cine.dia }}</td>
-                                                <td>{{ cine.id_tarifa }}</td>
+                                            <tr *ngFor="let tarifa of listTarifas">
+                                                <td>{{ tarifa.dia }}</td>
+                                                <td>{{ tarifa.precio }}</td>
                                                 <td>
-                                                    <i (click)="eliminarCine(cine._id)" style="font-size: 25px;" class="pe pe-7s-trash text-accent"></i>&nbsp;&nbsp;
-                                                    <i [routerLink]="['/editar-cines', cine._id]" style="font-size: 25px;" class="pe pe-7s-pen text-accent"></i>
+                                                    <i (click)="eliminarTarifas(tarifa._id)" style="font-size: 25px;" class="pe pe-7s-trash text-accent"></i>&nbsp;&nbsp;
+                                                    <i [routerLink]="['/editar-tarifas', tarifa._id]" style="font-size: 25px;" class="pe pe-7s-pen text-accent"></i>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -64,7 +54,7 @@
                                 </div>
                                 <br>
                                 <div class="text-right font-bold c-white y-value">
-                                    <div id="val_a">Total Productos: {{elementos}}</div>
+                                    <div id="val_a">Total de Tarifas: {{elementos}}</div>
                                 </div>
                             </div>
                         </div>

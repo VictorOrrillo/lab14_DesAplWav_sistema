@@ -6,6 +6,7 @@ import { ListarProductosComponent } from './pages/productos/listar-productos/lis
 import { ListarCinesComponent } from './pages/cines/listar-cines/listar-cines.component';
 import { EditarCinesComponent } from './pages/cines/editar-cines/editar-cines.component';
 import { CrearCinesComponent } from './pages/cines/crear-cines/crear-cines.component';
+import { ListarTarifasComponent } from './pages/tarifas/listar-tarifas/listar-tarifas.component';
 import { CreateUserComponent } from './pages/users/create-user/create-user.component';
 import { LoginComponent } from './pages/users/login/login.component';
 import { TiendasComponent } from './pages/tiendas/tiendas.component';
@@ -21,6 +22,7 @@ const routesInicio: Routes = [
   { path: 'listar-cines', component: ListarCinesComponent},
   { path: 'editar-cines', component: EditarCinesComponent},
   { path: 'crear-cines', component: CrearCinesComponent},
+  { path: 'listar-tarifas', component: ListarTarifasComponent},
   { path: 'tiendas', component: TiendasComponent },
   { path: 'crear-tiendas', component: CrearTiendasComponent},
   { path: 'editar-tienda/:id', component: EditarTiendasComponent},

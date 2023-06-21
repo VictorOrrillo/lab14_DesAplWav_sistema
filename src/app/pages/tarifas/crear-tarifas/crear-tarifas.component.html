@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<section class="content">
+    <div class="container-fluid">
+      <div class="row m-t-sm">
+        <div class="col-md-15">
+            <div class="panel">
+                <div class="panel-body">
+                    <div class="col-md-12 col-sm-12" id="form" style="display:block;">
+                        <div class="panel panel-filled">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-12"><h5 class="m-t-xs">Ingreso de Tarifas</h5></div>
+                                </div>
+                                <form [formGroup]="tarifaForm" (ngSubmit)="agregarTarifa()">
+                                    <div class="form-group">
+                                        <label>Dia</label>
+                                        <input type="text" formControlName="dia" 
+                                            class="form-control" placeholder="Ingresar dia">
+                                        <div class="text-danger"
+                                            *ngIf="tarifaForm.get('dia')?.hasError('required') && 
+                                                    tarifaForm.get('dia')?.touched">
+                                            <span>El dia <strong>es obligatorio</strong></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Tarifa</label>
+                                        <input type="text" formControlName="tarifa" 
+                                            class="form-control" placeholder="Ingresar tarifa">
+                                        <div class="text-danger"
+                                            *ngIf="tarifaForm.get('tarifa')?.hasError('required') && 
+                                                    tarifaForm.get('tarifa')?.touched">
+                                            <span>La tarifa <strong>es obligatoria</strong></span>
+                                        </div>
+                                    </div>
+                                    <div  class="col-sm-12 text-right">
+                                        <div class="panel-body buttons-margin">
+                                           <button type="submit" [disabled]="tarifaForm.invalid"  class="btn btn-w-md btn-success">Guardar</button>&nbsp;&nbsp;
+                                           <button class="btn btn-w-md btn-warning" routerLink="/listar-tarifas">Cancelar</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+      </div>
+    </div>
+  </section>
