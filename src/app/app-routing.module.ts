@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { CrearProductosComponent } from './pages/productos/crear-productos/crear-productos.component';
 import { EditarProductosComponent } from './pages/productos/editar-productos/editar-productos.component';
 import { ListarProductosComponent } from './pages/productos/listar-productos/listar-productos.component';
+import { ListarCinesComponent } from './pages/cines/listar-cines/listar-cines.component';
+import { EditarCinesComponent } from './pages/cines/editar-cines/editar-cines.component';
+import { CrearCinesComponent } from './pages/cines/crear-cines/crear-cines.component';
 import { CreateUserComponent } from './pages/users/create-user/create-user.component';
 import { LoginComponent } from './pages/users/login/login.component';
 import { TiendasComponent } from './pages/tiendas/tiendas.component';
@@ -15,6 +18,9 @@ const routesInicio: Routes = [
   { path: 'listar-productos', component: ListarProductosComponent },
   { path: 'crear-productos', component: CrearProductosComponent },
   { path: 'editar-producto/:id', component: EditarProductosComponent },
+  { path: 'listar-cines', component: ListarCinesComponent},
+  { path: 'editar-cines', component: EditarCinesComponent},
+  { path: 'crear-cines', component: CrearCinesComponent},
   { path: 'tiendas', component: TiendasComponent },
   { path: 'crear-tiendas', component: CrearTiendasComponent},
   { path: 'editar-tienda/:id', component: EditarTiendasComponent},
