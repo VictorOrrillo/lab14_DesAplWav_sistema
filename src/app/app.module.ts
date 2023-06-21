@@ -16,6 +16,9 @@ import { TiendasComponent } from './pages/tiendas/tiendas.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { CrearTiendasComponent } from './pages/tiendas/crear-tiendas/crear-tiendas.component';
 import { EditarTiendasComponent } from './pages/tiendas/editar-tiendas/editar-tiendas.component';
+import { ListarCinesComponent } from './pages/cines/listar-cines/listar-cines.component';
+import { CrearCinesComponent } from './pages/cines/crear-cines/crear-cines.component';
+import { EditarCinesComponent } from './pages/cines/editar-cines/editar-cines.component';
 
 
 @NgModule({
@@ -29,7 +32,10 @@ import { EditarTiendasComponent } from './pages/tiendas/editar-tiendas/editar-ti
     EditarProductosComponent,
     TiendasComponent,
     CrearTiendasComponent,
-    EditarTiendasComponent
+    EditarTiendasComponent,
+    ListarCinesComponent,
+    CrearCinesComponent,
+    EditarCinesComponent
   ],
   imports: [
     BrowserModule,

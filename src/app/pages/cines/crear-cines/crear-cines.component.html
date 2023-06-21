@@ -1,0 +1,90 @@
+<app-navbar></app-navbar>
+<section class="content">
+    <div class="container-fluid">
+      <div class="row m-t-sm">
+        <div class="col-md-15">
+            <div class="panel">
+                <div class="panel-body">
+                    <div class="col-md-12 col-sm-12" id="form" style="display:block;">
+                        <div class="panel panel-filled">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-12"><h5 class="m-t-xs">Ingreso de Cine</h5></div>
+                                </div>
+                                <form [formGroup]="cineForm" (ngSubmit)="agregarCine()">
+                                    <div class="form-group">
+                                        <label>Nombre</label>
+                                        <input type="text" formControlName="nombre"
+                                            class="form-control" placeholder="Ingresar nombre">
+                                        <div class="text-danger"
+                                            *ngIf="cineForm.get('nombre')?.hasError('required') && 
+                                                    cineForm.get('nombre')?.touched">
+                                            <span>El nombre <strong>es obligatorio</strong></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Calle</label>
+                                        <input type="text" formControlName="calle" 
+                                            class="form-control" placeholder="Ingresar calle">
+                                        <div class="text-danger"
+                                            *ngIf="cineForm.get('calle')?.hasError('required') && 
+                                                    cineForm.get('calle')?.touched">
+                                            <span>La calle <strong>es obligatoria</strong></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Numero</label>
+                                        <input type="number" formControlName="numero" 
+                                            class="form-control" placeholder="Ingresar numero">
+                                        <div class="text-danger"
+                                            *ngIf="cineForm.get('numero')?.hasError('required') && 
+                                                    cineForm.get('numero')?.touched">
+                                            <span>EL numero <strong>es obligatorio</strong></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Telefono</label>
+                                        <input type="number" formControlName="telefono" 
+                                            class="form-control" placeholder="Ingresar telefono">
+                                        <div class="text-danger"
+                                            *ngIf="cineForm.get('telefono')?.hasError('required') && 
+                                                    cineForm.get('telefono')?.touched">
+                                            <span>El telefono <strong>es obligatorio</strong></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Dia</label>
+                                        <input type="text" formControlName="dia" 
+                                            class="form-control" placeholder="Ingresar dia">
+                                        <div class="text-danger"
+                                            *ngIf="cineForm.get('dia')?.hasError('required') && 
+                                                    cineForm.get('dia')?.touched">
+                                            <span>El dia <strong>es obligatorio</strong></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Tarifa</label>
+                                        <input type="text" formControlName="tarifa" 
+                                            class="form-control" placeholder="Ingresar tarifa">
+                                        <div class="text-danger"
+                                            *ngIf="cineForm.get('tarifa')?.hasError('required') && 
+                                                    cineForm.get('tarifa')?.touched">
+                                            <span>La tarifa <strong>es obligatoria</strong></span>
+                                        </div>
+                                    </div>
+                                    <div  class="col-sm-12 text-right">
+                                        <div class="panel-body buttons-margin">
+                                           <button type="submit" [disabled]="cineForm.invalid"  class="btn btn-w-md btn-success">Guardar</button>&nbsp;&nbsp;
+                                           <button class="btn btn-w-md btn-warning" routerLink="/listar-cines">Cancelar</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+      </div>
+    </div>
+  </section>
